@@ -1,0 +1,21 @@
+<h1>Listing get_guids</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @get_guids.each do |get_guid| %>
+  <tr>
+    <td><%= link_to 'Show', get_guid %></td>
+    <td><%= link_to 'Edit', edit_get_guid_path(get_guid) %></td>
+    <td><%= link_to 'Destroy', get_guid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Get guid', new_get_guid_path %>

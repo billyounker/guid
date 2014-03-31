@@ -1,0 +1,21 @@
+<%= simple_form_for(@get_guid) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  </div>
+
+  	<%= f.input :first_name, label: 'First Name' %>
+  	<%= f.input :middle_name, label: 'Middle Name' %>
+  	<%= f.input :last_name, label: 'Last Name' %>
+  	<%= f.input :birthdate, label: 'Date of Birth', :as => :date, :start_year => 1990, :end_year => 2014, :order => [:month, :day, :year] %>
+  	<%= f.input :city_of_birth, label: 'City of Birth' %>
+  	<%= f.input :nation_of_birth, label: 'Country of birth', collection: ["Canada", "Ireland", "United States", "Other"] %>
+  	<%= f.input :sex_at_birth, label: 'Physical sex at birth', collection: ["Female", "Male", "Other"] %>
+  	<h5>The below fields are optional: </h5>
+  	<%= f.input :government_id, label: 'Government issued ID #' %>
+  	<%= f.input :nation_of_government_id, label: 'Country of Government issued ID', collection: ["Canada", "Ireland", "United States", "Other"] %>
+
+  <div class="form-actions">
+    <%= f.submit 'Create GUID' %>
+  </div>
+<% end %>

@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140328140031) do
+ActiveRecord::Schema.define(:version => 20140331232137) do
+
+  create_table "get_guids", :force => true do |t|
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.integer  "day_of_birth"
+    t.integer  "month_of_birth"
+    t.integer  "year_of_birth"
+    t.string   "city_of_birth"
+    t.string   "country_of_birth"
+    t.string   "sex_at_birth"
+    t.string   "government_id"
+    t.string   "country_of_id"
+    t.string   "uuid"
+    t.string   "nation_of_birth"
+    t.string   "nation_of_government_id"
+    t.date     "birthdate"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
