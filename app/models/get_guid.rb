@@ -30,7 +30,7 @@ class GetGuid < ActiveRecord::Base
 before_save :create_uuid
 def create_uuid
     begin
-      self.uuid=SecureRandom.base64(64)
+      self.uuid=SecureRandom.base64(10)
     end while self.class.exists?(:uuid =>uuid)
   end
 
